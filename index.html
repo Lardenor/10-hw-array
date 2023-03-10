@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+  margin: 5px;  
+}
+.container{
+       border: 1px solid red;
+            padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+        body{
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .task_2{
+            border: 1px solid red;
+            padding: 10px;  
+        }
+        .task_3{
+            border: 1px solid red;
+            padding: 10px;
+        }
+       
+         .task_4{
+            border: 1px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- !Task 222222222222222 -->
+<div class="task_2">
+    <div>Завдання 2:</div>
+    <div class="task_2_1"></div>
+    <div class="task_2_2"></div>
+    <div class="task_2_3"></div>
+    <div class="task_2_4"></div>
+</div>
+    <!-- !Task 222222222222222 -->
+    <!-- *333333333333333333 -->
+    <div class="task_3">
+        <h2>Завдання 3</h2>
+        <input id="input-text">
+        <button onclick="writeStyledText(styles, document.getElementById('input-text').value)">Вивести текст</button>
+    </div>
+    <!-- *333333333333333333 -->
+    <!-- 4444444444444444444 -->
+    <div class="task_4">
+        <h2>Завдання 4:</h2>
+        <h1>Всі Аудиторії</h1>
+        <div id="allClassrooms"></div>
+    
+        <h1>Аудиторії за факультетом</h1>
+        <form>
+            <label for="facultySelect">Вибрати факультет:</label>
+            <select id="facultySelect" name="facultySelect">
+                <option value="Фізичний">Фізичний</option>
+                <option value="Математичний">Математичний</option>
+                <option value="Хімічний">Хімічний</option>
+            </select>
+            <button type="button" onclick="printClassroomsByFaculty(document.getElementById('facultySelect').value)">Показати аудиторію</button>
+        </form>
+        <div id="facultyClassrooms"></div>
+    
+        <h1>Аудиторії за групою</h1>
+        <form>
+            <label for="groupSelect">Вибрати групу:</label>
+            <select id="groupSelect" name="groupSelect">
+                <option value="0">Група 1</option>
+                <option value="1">Група 2</option>
+            </select>
+            <button type="button"
+                onclick="printClassroomsForGroup(groups[document.getElementById('groupSelect').value])">Аудиторії за
+                групою</button>
+        </form>
+        <div id="groupClassrooms"></div>
+    
+        <h1>Сортування</h1>
+        <button type="button" onclick="sortClassroomsBySeats()">Сортування за місцями</button>
+        <button type="button" onclick="sortClassroomsByName()">Сортування за назвою</button>
+        <div id="sortedClassrooms"></div>
+    
+    </div>
+    <script src="receipt.js"></script>
+</body>
+</html>
